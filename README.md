@@ -1,4 +1,3 @@
-# TEAMNAME-SPRING2024-SQA
-
+# TEAM MACK
 Team Members:
 Abigail Taylor, Kaitlyn Smith, Mohab Yousef, and Cameron Stamps
