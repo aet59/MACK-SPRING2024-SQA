@@ -9,8 +9,8 @@ Lessons Learned:
     Familiarity with handling archived files.
     Ability to extract project files from a compressed archive.
 
-Activity: Upload project as a GitHub repo on github.com. Format of the repo name is TEAMNAME-SPRING2024-SQA
-Objective: Share the project on GitHub so we can work together easily, keep track of changes, and make it visible to others.
+Activity: Upload project as a GitHub repo on GitHub.com. Format of the repo name is TEAMNAME-SPRING2024-SQA
+Objective: Share the project on GitHub, so we can work together easily, keep track of changes, and make it visible to others.
 Approach: Create a new repository on GitHub named according to the specified format (TEAMNAME-SPRING2024-SQA) and upload the project files.
 Outcome: The project is successfully hosted on GitHub, allowing team members to access, contribute, and track changes efficiently.
 Lessons Learned:
@@ -40,7 +40,7 @@ Lessons Learned:
 
 Activity: Create a fuzz.py file that will automatically fuzz 5 Python methods of your choice. Report any bugs you discovered by the fuzz.py file. fuzz.py will be automatically executed from GitHub actions.
 Objective: Identify and report bugs through automated fuzz testing of selected Python methods.
-Approach: Develop a fuzz.py script to fuzz test five chosen Python methods. Configure GitHub Actions to automatically execute fuzz.py and report any discovered bugs.
+Approach: Develop a fuzz.py script to fuzz test days_between, getDevEmailForCommit, make_Chunks, getPythonFileCount, dumpContentIntoFile methods. Configure GitHub Actions to automatically execute fuzz.py and report any discovered bugs.
 Outcome: Bugs and vulnerabilities are identified early in the development cycle, allowing for timely resolution and improved software reliability.
 Lessons Learned:
     Understanding of fuzz testing concepts and techniques.
