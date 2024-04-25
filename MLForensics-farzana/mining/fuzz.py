@@ -1,51 +1,52 @@
-
-
+#output can be found in fuzz_output.jpg
 from mining import *
 
 
 def fuzzDays_between():
    try:
-    #result is negative days
-    res = days_between(0, 25)
+    # one only one day is formatted with datetime
+    d1_= datetime(2024, 12, 23, 0, 0)
+    d2_ = "june 2, 2024"
+    res = days_between(d1_, d2_)
     return res
    except Exception as e:
-        print ("Cannot have negative days", e)
+        print ("Type error:", e)
    
 
 def fuzz_getDevEmailForCommit():
     try:
-    #result is negative days
-        res = getDevEmailForCommit('this_path_is_invalid', "this_has_is_too")
+    #invalid hash
+        res = getDevEmailForCommit("this_path_is_invalid", 123)
         return res
     except Exception as e:
-        print ("Path is invalid", e)
+        print ("Hash type is unsupported:", e)
     
 
 def fuzz_makeChunks():
     try:
-    #invalid list size
-        res = makeChunks("list_name", 'chunksize')
+    #extra parameter
+        res = makeChunks("list_name", "size_chunk", 123)
         return res
     except Exception as e:  
-        print ("Invalid list size", e)
+        print ("Error:", e)
     
 
 def fuzz_getPythonFileCount():
    try:
-    #invalid path
+    #unsupported path type
     res = getPythonFileCount(1)
     return res
    except Exception as e:
-     print ("Invalid path", e)
+     print ("Unsupported path type:", e)
    
 
 def fuzz_dumpContentIntoFile():
    try:
-   #invalid path 
-    res = dumpContentIntoFile("something", )
+   #invalid path type
+    res = dumpContentIntoFile(1, "file" )
     return res
    except Exception as e:
-    print ("invalid path", e)
+    print ("Invalid path type:", e)
    
 
 if __name__=='__main__':
