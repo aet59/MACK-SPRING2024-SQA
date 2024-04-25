@@ -1,3 +1,4 @@
+#output can be found in fuzz_output.jpg
 from mining import *
 
 
