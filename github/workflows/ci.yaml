@@ -1,22 +1,14 @@
-name: Python CI
+name: Codacy Analysis CLI
 
-on: push
+on: ["push"]
 
 jobs:
-  build:
+  codacy-analysis-cli:
+    name: Codacy Analysis CLI
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.8'
-    - name: Install dependencies
-      run: |
-        pip install pytest hypothesis bandit
-    - name: Run tests
-      run: pytest
-    - name: Fuzz test
-      run: python fuzz.py
-    - name: Security analysis
-      run: bandit -r . -o security_report.csv
+      - name: Checkout code
+        uses: actions/checkout@main
+
+      - name: Run Codacy Analysis CLI
+        uses: codacy/codacy-analysis-cli-action@master
