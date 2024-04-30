@@ -1,7 +1,7 @@
 import logging
 import random
 
-# Configure logging
+# Configure logging.
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Mock implementation of the methods for demonstration purposes
