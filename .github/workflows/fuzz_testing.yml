@@ -1,5 +1,5 @@
 name: Fuzz Testing
-# Testing Fuzz.
+
 on:
   push: {}  # Trigger workflow on push
 
