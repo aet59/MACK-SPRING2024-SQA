@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip  # Upgrade pip to its latest version
-          pip install pandas gitpython  # Install pandas and gitpython
+          pip install pandas gitpython  # Install pandas and gitpython.
 
       - name: Run fuzz test script
         run: python fuzz.py  # Execute fuzz.py
